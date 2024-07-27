@@ -14,4 +14,4 @@ jobs:
     - name: Check current directory
       run: ls
     - name: build
-      run: clang++ Furby.cpp -o Furby
+      run: clang++ ./Furby.cpp -o Furby
