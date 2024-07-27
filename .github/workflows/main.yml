@@ -12,6 +12,6 @@ jobs:
         version: latest
         platform: x64
     - name: Check current directory
-      run: ls
+      run: pwd
     - name: build
       run: clang++ ./Furby.cpp -o Furby
