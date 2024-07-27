@@ -11,7 +11,24 @@ jobs:
       with:
         version: latest
         platform: x64
+
     - name: Check current directory
       run: pwd
-    - name: build
+
+    - name: List files in current directory
+      run: ls -la
+
+    - name: List files recursively
+      run: ls -R
+
+    - name: Verify Furby.cpp existence
+      run: |
+        if [ -f Furby.cpp ]; then
+          echo "Furby.cpp found"
+        else
+          echo "Furby.cpp not found"
+          exit 1
+        fi
+
+    - name: Build
       run: clang++ Furby.cpp -o Furby
