@@ -16,3 +16,8 @@ jobs:
         platform: x64
     - name: Build
       run: clang++ Furby.cpp -o Furby
+    - name: Upload Furby executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: Furby
+        path: Furby
